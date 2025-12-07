@@ -1,0 +1,14 @@
+{
+  "name": "deeplearning",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  // For gpu passthrough
+  "runArgs": ["--gpus=all"],
+  // Link folders
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  // Set user
+  "remoteUser": "vscode"
+}
